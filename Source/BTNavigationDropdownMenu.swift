@@ -157,7 +157,6 @@ public class BTNavigationDropdownMenu: UIView {
         self.tableView = BTTableView(frame: CGRectMake(mainScreenBounds.origin.x, mainScreenBounds.origin.y, mainScreenBounds.width, mainScreenBounds.height + 300 - 64), items: items, configuration: self.configuration)
         self.tableView.selectRowAtIndexPathHandler = { (indexPath: Int) -> () in
             self.didSelectItemAtIndexHandler!(indexPath: indexPath)
-            self.setMenuTitle("\(items[indexPath])")
             self.hideMenu()
             self.isShown = false
             self.layoutSubviews()
